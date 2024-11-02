@@ -41,18 +41,15 @@
 */
 
 /* Create a function named cartTotal that has no parameters
-  - cartTotal should iterate through the cart to get the total cost of all products
-  - cartTotal should return the total cost of the products in the cart
-  Hint: price and quantity can be used to determine total cost
+  - cartTotal should iterate through the cart to get the total of all products
+  - cartTotal should return the sum of the products in the cart
 */
 
 /* Create a function called emptyCart that empties the products from the cart */
 
 /* Create a function named pay that takes in an amount as an argument
-  - amount is the money paid by customer
   - pay will return a negative number if there is a remaining balance
   - pay will return a positive number if money should be returned to customer
-  Hint: cartTotal function gives us cost of all the products in the cart  
 */
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
@@ -63,17 +60,66 @@
    Run the following command in terminal to run tests
    npm run test
 */
+const products = [
+  { productId: 1, name: "Apple", price: 2, quantity: 0, image: "./images/apple.jpg" },
+  { productId: 2, name: "Orange", price: 3, quantity: 0, image: "./images/orange.jpg" },
+  { productId: 3, name: "Banana", price: 1.5, quantity: 0, image: "./images/banana.jpg" }
+];
 
-module.exports = {
-   products,
-   cart,
-   addProductToCart,
-   increaseQuantity,
-   decreaseQuantity,
-   removeProductFromCart,
-   cartTotal,
-   pay, 
-   emptyCart,
-   /* Uncomment the following line if completing the currency converter bonus */
-   // currency
+let cart = [];
+
+// Thêm sản phẩm vào giỏ hàng
+function addProductToCart(productId) {
+  const product = products.find(p => p.productId === productId);
+  if (product) {
+      product.quantity += 1; // Tăng số lượng sản phẩm
+      const existingProduct = cart.find(p => p.productId === productId);
+      if (!existingProduct) {
+          cart.push(product); // Thêm sản phẩm vào giỏ hàng nếu chưa có
+      }
+  }
 }
+
+// Tăng số lượng sản phẩm trong giỏ hàng
+function increaseQuantity(productId) {
+  const product = products.find(p => p.productId === productId);
+  if (product) {
+      product.quantity += 1; // Tăng số lượng
+  }
+}
+
+// Giảm số lượng sản phẩm trong giỏ hàng
+function decreaseQuantity(productId) {
+  const product = products.find(p => p.productId === productId);
+  if (product && product.quantity > 0) {
+      product.quantity -= 1; // Giảm số lượng
+      if (product.quantity === 0) {
+          removeProductFromCart(productId); // Nếu số lượng về 0 thì loại bỏ
+      }
+  }
+}
+
+// Xóa sản phẩm khỏi giỏ hàng
+function removeProductFromCart(productId) {
+  const productIndex = cart.findIndex(p => p.productId === productId);
+  if (productIndex !== -1) {
+      cart[productIndex].quantity = 0; // Đặt số lượng về 0
+      cart.splice(productIndex, 1); // Xóa sản phẩm khỏi giỏ hàng
+  }
+}
+
+// Tính tổng giá trị giỏ hàng
+function cartTotal() {
+  return cart.reduce((total, product) => total + (product.price * product.quantity), 0);
+}
+
+// Xuất ra các hàm và biến cần thiết
+module.exports = {
+  products,
+  cart,
+  addProductToCart,
+  increaseQuantity,
+  decreaseQuantity,
+  removeProductFromCart,
+  cartTotal
+};
