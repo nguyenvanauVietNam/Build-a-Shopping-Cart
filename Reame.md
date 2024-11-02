@@ -32,8 +32,8 @@ Please ensure that you complete the `script.js` and `front.js` files. The `index
 
 ## Project Result
 *Insert images of the project results here*
-![Result Screenshot UI](cd2073-intro-to-js-1-project-starter-main\starter\src\images\Result.png)  
-![Result Screenshot run test](cd2073-intro-to-js-1-project-starter-main\starter\src\images\npm_runt_test.png)  
+![Result Screenshot UI](cd2073-intro-to-js-1-project-starter-main/starter/src/images/Result.png)  
+![Result Screenshot run test](cd2073-intro-to-js-1-project-starter-main/starter/src/images/npm_runt_test.png)  
 
 ## References
 *Insert any links or references here*
