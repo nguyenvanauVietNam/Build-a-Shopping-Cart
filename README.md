@@ -37,9 +37,9 @@ Please ensure that you complete the `script.js` and `front.js` files. The `index
 
 ## References
 *Insert any links or references here*
-[GitHub Repository](https://github.com/lucianogasparotto/Building-a-Shopping-Cart.git)
-[GitHub Repository](https://github.com/carl819/shoppingcart.git)
+[GitHub Repository 1](https://github.com/lucianogasparotto/Building-a-Shopping-Cart.git)
+[GitHub Repository 2](https://github.com/carl819/shoppingcart.git)
 
 ### Video Guide Line
-[Youtube Video](https://www.youtube.com/watch?v=gXWohFYrI0M)
-[Youtube Video](https://www.youtube.com/watch?v=e6NYBQ6NU74&t=266s)
+[Youtube Video 1](https://www.youtube.com/watch?v=gXWohFYrI0M)
+[Youtube Video 2](https://www.youtube.com/watch?v=e6NYBQ6NU74&t=266s)
