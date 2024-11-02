@@ -108,6 +108,21 @@ function removeProductFromCart(productId) {
   }
 }
 
+/**
+ * Thanh toán giỏ hàng
+ * @param {number} amount - Số tiền thanh toán
+ * @returns {number} - Số tiền còn lại sau khi thanh toán
+ */
+function pay(amount) {
+  const total = cartTotal();
+  if (amount >= total) {
+    cart = []; // Clear the cart
+    return amount - total; // Return the remaining amount
+  } else {
+    return -1; // Indicate that the payment was insufficient
+  }
+}
+
 // Tính tổng giá trị giỏ hàng
 function cartTotal() {
   return cart.reduce((total, product) => total + (product.price * product.quantity), 0);
@@ -121,5 +136,6 @@ module.exports = {
   increaseQuantity,
   decreaseQuantity,
   removeProductFromCart,
-  cartTotal
+  cartTotal,
+  pay
 };
