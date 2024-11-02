@@ -1,40 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Start of the HTML document with English as the language -->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&display=swap" rel="stylesheet">
-    <link href="assets/styles.css" rel="stylesheet">
-    <script src="assets/script.js" defer></script>
-    <script src="assets/front.js" defer></script>
+    <meta charset="UTF-8"> <!-- Specify the character encoding for the document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensure compatibility with Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design for mobile devices -->
+    <title>Shopping Cart</title> <!-- Title of the webpage -->
+    
+    <!-- Links for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnect for cross-origin requests -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&display=swap" rel="stylesheet"> <!-- Import Montserrat font -->
+    
+    <link href="assets/styles.css" rel="stylesheet"> <!-- Link to the external CSS stylesheet -->
+    <script src="assets/script.js" defer></script> <!-- Include the main script file with deferred loading -->
+    <script src="assets/front.js" defer></script> <!-- Include the front-end script file with deferred loading -->
 </head>
 <body>
-    <div class="shopping-cart">
-        <h1>Kirana's Fruit Stand</h1>
-        <div class="currency-selector"></div>
-        <div class="cart-container">
-            <div class="products-container">
-                <h2>Products</h2>
-                <div class="products"></div>
-                <h2>Your Shopping Cart</h2>
-                <div class="empty-btn"></div>
-                <div class="cart"></div>
+    <div class="shopping-cart"> <!-- Main container for the shopping cart application -->
+        <h1>Kirana's Fruit Stand</h1> <!-- Main heading for the application -->
+        <div class="currency-selector"></div> <!-- Placeholder for currency selection dropdown -->
+        
+        <div class="cart-container"> <!-- Container for the cart and product display -->
+            <div class="products-container"> <!-- Container for product listing -->
+                <h2>Products</h2> <!-- Heading for product section -->
+                <div class="products"></div> <!-- Placeholder for dynamically generated product items -->
+                
+                <h2>Your Shopping Cart</h2> <!-- Heading for the shopping cart section -->
+                <div class="empty-btn"></div> <!-- Placeholder for an empty cart button -->
+                <div class="cart"></div> <!-- Placeholder for dynamically generated cart items -->
             </div>
-            <div class="checkout-container">
-                <h2>Checkout</h2>
-                <div class="checkout">
-                    <div class="cart-total"></div>
-                    <form>
-                        <label>Enter Cash Received:</label>
-                        <input class="received" type="text">
-                        <button class="pay">Submit</button> 
+            
+            <div class="checkout-container"> <!-- Container for the checkout process -->
+                <h2>Checkout</h2> <!-- Heading for the checkout section -->
+                <div class="checkout"> <!-- Container for checkout information -->
+                    <div class="cart-total"></div> <!-- Placeholder for displaying the total price of the cart -->
+                    <form> <!-- Form for entering payment information -->
+                        <label>Enter Cash Received:</label> <!-- Label for the cash input field -->
+                        <input class="received" type="text"> <!-- Input field for entering the cash received -->
+                        <button class="pay">Submit</button> <!-- Button to submit payment -->
                     </form>
-                    <h3>Receipt</h3>
-                    <div class="pay-summary"></div>
+                    
+                    <h3>Receipt</h3> <!-- Heading for the receipt section -->
+                    <div class="pay-summary"></div> <!-- Placeholder for displaying payment summary or receipt -->
                 </div>
             </div>
         </div>
